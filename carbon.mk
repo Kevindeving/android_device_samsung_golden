@@ -26,7 +26,7 @@ TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
 # Inherit some Carbon common stuff.
-$(call inherit-product, vendor/cm/config/common_phone.mk)
+$(call inherit-product, vendor/carbon/config/common_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/golden/golden.mk)
