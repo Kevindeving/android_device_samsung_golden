@@ -37,8 +37,7 @@ PRODUCT_COPY_FILES += \
 
 # Inputs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl  \
-    $(LOCAL_PATH)/configs/usr/keylayout/simple_remote.kl:system/usr/keylayout/simple_remote.kl
+    $(LOCAL_PATH)/configs/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
 # Graphics
 PRODUCT_COPY_FILES += \
