@@ -21,8 +21,8 @@
 /dev/alps_io 0660 root system
 
 # PWR QOS devices
-/dev/ape_opp 0660 media system
-/dev/ddr_opp 0660 media system
+/dev/ape_opp 0660 system graphics
+/dev/ddr_opp 0660 system graphics
 
 # hwmem driver
 /dev/hwmem 0666 media system
