@@ -182,3 +182,6 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Odex build
+DISABLE_DEXPREOPT := false

@@ -115,3 +115,6 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/golden/recovery/graphics.c
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SUPPRESS_EMMC_WIPE := true
+
+# Odex build
+WITH_DEXPREOPT := true
