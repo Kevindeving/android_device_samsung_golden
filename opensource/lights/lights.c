@@ -36,7 +36,6 @@ static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 /** Paths to light files **/
 char const *const BACKLIGHT_FILE = "/sys/class/backlight/panel/brightness";
 char const *const BUTTON_FILE = "/sys/class/leds/button-backlight/brightness";
-char const *const NOTIFICATION_FILE = "/sys/class/misc/backlightnotification/notification_led";
 
 /** Write integer to file **/
 static int write_int(char const *path, int value)
@@ -96,19 +95,6 @@ static int set_light_buttons(struct light_device_t* dev, struct light_state_t co
     return err;
 }
 
-/** Set buttons backlight as BLN **/
-static int set_light_notifications(struct light_device_t* dev, struct light_state_t const* state)
-{
-    int err = 0;
-    pthread_mutex_lock (&g_lock);
-    if(is_lit(state))
-        err = write_int(NOTIFICATION_FILE, 1);
-    else
-        err = write_int(NOTIFICATION_FILE, 0);
-    pthread_mutex_unlock (&g_lock);
-    return err;
-}
-
 /** Close the lights device */
 static int close_lights(struct light_device_t *dev)
 {
@@ -129,8 +115,6 @@ static int open_lights(const struct hw_module_t *module, char const *name, struc
 		set_light = set_light_backlight;
 	else if (0 == strcmp(LIGHT_ID_BUTTONS, name))
         set_light = set_light_buttons;
-	else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
-        set_light = set_light_notifications;
 	else
 		return -EINVAL;
 
