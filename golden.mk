@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
     libblt_hw
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
+    debug.sf.hw=1 \
     debug.hwui.render_dirty_regions=false \
     persist.sys.use_dithering=2 \
     persist.sys.strictmode.disable=1
