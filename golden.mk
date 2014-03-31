@@ -124,8 +124,8 @@ PRODUCT_PACKAGES += \
     lights.montblanc
 
 # Power
-PRODUCT_PACKAGES += \
-    power.montblanc
+#PRODUCT_PACKAGES += \
+#    power.montblanc
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
